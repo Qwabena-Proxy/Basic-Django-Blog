@@ -5,12 +5,37 @@
     <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Proxy.net</title>
-    <!-- <link rel="stylesheet" type="text/css" href="{% static 'index.css' %}"> -->
+    <link rel="stylesheet" type="text/css" href="{% static 'content.css' %}">
     </head>
     <body>
-        <h1 style="text-align: center;">{{title}}</h1>
-        <h3 style="text-align: center;">{{dateandtime}}</h3>
-        <p>{{content}}</p>
+        <div>
+            <ul class="upperlinks">
+              {% if user.is_authenticated %}
+              <li><a href="/">Home</a></li>
+              <li><a href="logout">Logout</a></li>
+              {% else %}
+              <li><a href="/">Home</a></li>
+              <li><a href="login">Login or Signup</a></li>
+              {% endif %}
+            </ul>
+          </div>
+
+        <div class="header">
+            {% if user.is_authenticated %}
+            <h3 style="text-align: center;">Welcome {{user.username}}<br>to Proxy's Blog</h3>
+            {% else %}
+            <h2 style="text-align: center;">Welcome to Proxy's Blog</h2>
+            {% endif %}
+          </div>
+        <div class="row">
+            <div class="leftcolumn">
+              <div class="card">
+                    <h1 style="text-align: left;">{{title}}</h1>
+                    <h3 style="text-align: left;">{{dateandtime}}</h3>
+                    <p>{{content}}</p>
+              </div>
+            </div>
+          </div>
     
     </body>
 </html>

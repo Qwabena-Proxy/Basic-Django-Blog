@@ -36,7 +36,7 @@
       <a style="text-decoration: none; color: black;" href="blog/{{post.Title}}">
         <h1><b>Title:</b> {{post.Title}}</h1>
         <h3><b>Date:</b> {{post.DateTime}}</h3>
-        <p>{{post.Description}}</p>
+        <p>{{post.Description|truncatewords:20}}</p>
       </a>
     </div>
     {% endfor %}
