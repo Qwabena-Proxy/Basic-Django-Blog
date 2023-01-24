@@ -3,7 +3,7 @@
 /* BASIC */
 
 html {
-  background-color: #56baed;
+  background-color: #fff;
 }
 
 body {
@@ -45,7 +45,7 @@ h2 {
 #formContent {
   -webkit-border-radius: 10px 10px 10px 10px;
   border-radius: 10px 10px 10px 10px;
-  background: #fff;
+  background: #000;
   padding: 30px;
   width: 90%;
   max-width: 450px;
@@ -74,8 +74,8 @@ h2.inactive {
 }
 
 h2.active {
-  color: #0d0d0d;
-  border-bottom: 2px solid #5fbae9;
+  color: #fff;
+  /* border-bottom: 2px solid #5fbae9; */
 }
 
 
@@ -83,7 +83,7 @@ h2.active {
 /* FORM TYPOGRAPHY*/
 
 input[type=button], input[type=submit], input[type=reset]  {
-  background-color: #56baed;
+  background-color: black;
   border: none;
   color: white;
   padding: 15px 80px;
@@ -105,7 +105,8 @@ input[type=button], input[type=submit], input[type=reset]  {
 }
 
 input[type=button]:hover, input[type=submit]:hover, input[type=reset]:hover  {
-  background-color: #39ace7;
+  background-color: #fff;
+  color: #000;
 }
 
 input[type=button]:active, input[type=submit]:active, input[type=reset]:active  {
@@ -116,7 +117,7 @@ input[type=button]:active, input[type=submit]:active, input[type=reset]:active  
   transform: scale(0.95);
 }
 
-input[type=text] {
+input[type=text], input[type=email],input[type=password]{
   background-color: #f6f6f6;
   border: none;
   color: #0d0d0d;
@@ -228,6 +229,18 @@ input[type=text]:placeholder {
   -webkit-animation-delay: 1s;
   -moz-animation-delay: 1s;
   animation-delay: 1s;
+}
+
+.fadeIn.fith {
+  -webkit-animation-delay: 1.2s;
+  -moz-animation-delay: 1.2s;
+  animation-delay: 1.2s;
+}
+
+.fadeIn.sixth {
+  -webkit-animation-delay: 1.4s;
+  -moz-animation-delay: 1.4s;
+  animation-delay: 1.4s;
 }
 
 /* Simple CSS3 Fade-in Animation */
